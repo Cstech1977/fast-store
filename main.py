@@ -1,6 +1,3 @@
-from fastapi import APIRouter
-
-
 def main():
     print("Hello from fast-store!")
 
