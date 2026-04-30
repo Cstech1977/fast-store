@@ -1,6 +1,7 @@
-from passlib.context import CryptContext
-import jwt
 from datetime import datetime, timedelta, timezone
+
+import jwt
+from passlib.context import CryptContext
 
 # We use bcrypt for secure password hashing
 pwd_context = CryptContext(schemes=["bcrypt"], deprecated="auto")

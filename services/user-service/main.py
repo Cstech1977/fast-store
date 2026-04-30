@@ -1,16 +1,16 @@
 from contextlib import asynccontextmanager
 
+import grpc
 from fastapi import Depends, FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
-import grpc
-from sqlmodel import SQLModel, Session, select
+from shared.jwt_utils import verify_token
+from sqlmodel import Session, SQLModel, select
 
+import product_pb2
+import product_pb2_grpc
 from auth import create_access_token, hash_password, verify_password
 from db import engine, get_session
 from models import User, UserPublic
-import product_pb2
-import product_pb2_grpc
-from shared.jwt_utils import verify_token
 
 
 @asynccontextmanager

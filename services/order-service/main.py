@@ -1,10 +1,9 @@
 import asyncio
-from contextlib import asynccontextmanager
 import json
-
-from fastapi import FastAPI
+from contextlib import asynccontextmanager
 
 import aio_pika
+from fastapi import FastAPI
 
 # Global connection variable
 rabbitmq_connection = None

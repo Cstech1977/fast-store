@@ -8,6 +8,8 @@
 - uv add "passlib[bycrypt]" --package user-service
 - uv add pyjwt fastapi
 - uv init --app services/order-service 
+- uv init --app services/inventory-service
+- uv add "fastapi[standard]" aio-pika --package inventory-service
 
 ## commands docker
 - docker compose up --build

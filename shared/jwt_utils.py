@@ -1,6 +1,6 @@
 import jwt
 from fastapi import HTTPException, Security
-from fastapi.security import HTTPBearer, HTTPAuthorizationCredentials
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 # In production, load this from os.getenv("SECRET_KEY")
 SECRET_KEY = "my_super_secret_jwt_key_for_microservices"
